@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 /*Routs::get("/post",'PostController@create')->name("post.create");
-Routs::post("/post",'PostController@create')->name("post.store");*/
+Routs::post("/post",'PostController@create')->name("post.store");*/ 
