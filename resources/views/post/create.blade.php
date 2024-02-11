@@ -3,6 +3,8 @@
 @section("content")
 <form action="{{ route("post.store")}}" method="post">
   @csrf
+  <h1>投稿画面</h1>
+
   <div>
     名前:
     <input name="name" value="名前の入力欄"/>

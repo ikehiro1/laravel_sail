@@ -6,6 +6,7 @@
     <title>@yield('title', 'Your App')</title>
 </head>
 <body>
+    共通のコメント
     @yield('content')
 </body>
 </html>
