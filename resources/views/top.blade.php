@@ -1,0 +1,1 @@
+<a href="{{route("post.create")}}">投稿画面</a>

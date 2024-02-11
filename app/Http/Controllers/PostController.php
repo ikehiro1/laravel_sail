@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
-use App\Http\Controllers\PostController;
 class PostController extends Controller
 {
     public function create()
@@ -21,5 +20,11 @@ class PostController extends Controller
         $post->content = $request->content;
         $post->save();
         return redirect()->route('post.create');
+    }
+
+    public function index()
+    {
+        $posts = Post::all();
+        return view("posts.index", compact("posts"));
     }
 }

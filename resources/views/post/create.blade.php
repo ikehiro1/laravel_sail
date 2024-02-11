@@ -1,7 +1,8 @@
 @extends("layouts.app")
 
 @section("content")
-<form action="{{ route("post.store")}}" method="POST">
+<form action="{{ route("post.store")}}" method="post">
+  @csrf
   <div>
     名前:
     <input name="name" value="名前の入力欄"/>
@@ -14,5 +15,7 @@
      <textarea name="content" placeholder="内容の入力"></textarea>
   </div>
   <button>送信</button>
+  <a href="{{route("top.top")}}">top画面へ</a>
+  <a href="{{route("posts.index")}}">投稿一覧</a>
 </form>  
 @endsection
