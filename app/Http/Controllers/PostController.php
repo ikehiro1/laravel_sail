@@ -18,6 +18,10 @@ class PostController extends Controller
         $post->name = $request->name;
         $post->title = $request->title;
         $post->content = $request->content;
+
+        $dir = 'sample';
+        $request->file('image')->store('public/' . $dir,);
+        
         $post->save();
         return redirect()->route('post.create');
     }
@@ -27,4 +31,5 @@ class PostController extends Controller
         $posts = Post::all();
         return view("posts.index", compact("posts"));
     }
+    
 }

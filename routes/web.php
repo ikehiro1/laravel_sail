@@ -21,5 +21,8 @@ Route::get('/', function () {
 Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
 Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::post('/upload', 'PostController@upload')->name('post.upload');
+
+
 /*Route::get("/top", [TopController::class, "top"])->name('top.top');*/
 Route::get('top', 'App\Http\Controllers\TopController@top')->name('top.top');
